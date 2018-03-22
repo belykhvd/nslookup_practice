@@ -211,7 +211,7 @@ d.dns.ripn.net  AAAA IPv6 address = 2001:678:18:0:194:190:124:17
 b.dns.ripn.net  internet address = 194.85.252.62
 b.dns.ripn.net  AAAA IPv6 address = 2001:678:16:0:194:85:252:62
 ```
-# 6.
+## 6.
 Разрешаем cs.usu.edu.ru.
 1) Находимся в (ROOT) = a.root-servers.net. = 198.41.0.4, спрашиваем у него, получаем список авторитетных серверов имен и их IP адреса.
 2) Переходим в домен (RU) = a.dns.ripn.net = 193.232.128.6, спрашиваем, получаем список nameserver'ов и IP.
@@ -234,3 +234,59 @@ b.dns.ripn.net  AAAA IPv6 address = 2001:678:16:0:194:85:252:62
 1,2) те же
 3) set type=ns, получаем ns1.URFU.RU = 212.193.66.21
 4) OK: 212.193.66.79
+## 7.
+## 8.
+* ya.ru.:
+```
+> ya.ru.
+╤хЁтхЁ:  [213.180.193.1]
+Address:  213.180.193.1
+
+ya.ru
+        primary name server = ns1.yandex.ru
+        responsible mail addr = sysadmin.yandex.ru
+        serial  = 2018031600
+        refresh = 900 (15 mins)
+        retry   = 600 (10 mins)
+        expire  = 2592000 (30 days)
+        default TTL = 900 (15 mins)
+ya.ru   nameserver = ns1.yandex.ru
+ya.ru   nameserver = ns2.yandex.ru
+ns1.yandex.ru   internet address = 213.180.193.1
+ns2.yandex.ru   internet address = 93.158.134.1
+ns1.yandex.ru   AAAA IPv6 address = 2a02:6b8::1
+ns2.yandex.ru   AAAA IPv6 address = 2a02:6b8:0:1::1
+```
+* urfu.ru.:
+```
+> urfu.ru.
+╤хЁтхЁ:  family.dns.yandex.ru
+Address:  77.88.8.7
+
+Не заслуживающий доверия ответ:
+urfu.ru
+        primary name server = ns1.urfu.ru
+        responsible mail addr = hostmaster.urfu.ru
+        serial  = 2012091861
+        refresh = 3600 (1 hour)
+        retry   = 1800 (30 mins)
+        expire  = 2419200 (28 days)
+        default TTL = 3600 (1 hour)
+```
+* mail.ru.:
+```
+> mail.ru.
+╤хЁтхЁ:  family.dns.yandex.ru
+Address:  77.88.8.7
+
+Не заслуживающий доверия ответ:
+mail.ru
+        primary name server = ns1.mail.ru
+        responsible mail addr = hostmaster.mail.ru
+        serial  = 3312856144
+        refresh = 900 (15 mins)
+        retry   = 900 (15 mins)
+        expire  = 604800 (7 days)
+        default TTL = 60 (1 min)
+```
+## 9
